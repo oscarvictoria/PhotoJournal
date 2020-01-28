@@ -11,13 +11,13 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhotoJournal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="PhotoJournal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Wob-el-jff">
-                                <rect key="frame" x="0.0" y="88" width="414" height="676"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="681"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7Nb-Ey-KHu">
                                     <size key="itemSize" width="373" height="383"/>
@@ -76,7 +76,7 @@
                                 </cells>
                             </collectionView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ads-gO-StQ">
-                                <rect key="frame" x="0.0" y="764" width="414" height="49"/>
+                                <rect key="frame" x="0.0" y="769" width="414" height="44"/>
                                 <items>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="LcI-mJ-IN2"/>
                                     <barButtonItem image="plus" catalog="system" width="328" id="vTb-UC-4fq">
@@ -112,7 +112,7 @@
         <!--Edit-->
         <scene sceneID="hHH-qy-Ngr">
             <objects>
-                <viewController id="WGZ-3J-I5Q" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhotoViewController" id="WGZ-3J-I5Q" customClass="PhotoViewController" customModule="PhotoJournal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ahc-mG-gjz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -120,9 +120,17 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8z-TU-tZf">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
-                                    <barButtonItem title="Cancel" id="xBG-mR-m2x"/>
+                                    <barButtonItem title="Cancel" id="xBG-mR-m2x">
+                                        <connections>
+                                            <action selector="cancel:" destination="WGZ-3J-I5Q" id="Vs9-lo-WbF"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem width="288" style="plain" systemItem="fixedSpace" id="XCS-ji-lPW"/>
-                                    <barButtonItem title="Save" width="423" id="B38-GR-Yew"/>
+                                    <barButtonItem title="Save" width="423" id="B38-GR-Yew">
+                                        <connections>
+                                            <segue destination="upP-RU-cfx" kind="unwind" unwindAction="newEventWithSegue:" id="py9-x9-1Da"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kea-wb-1aH">
@@ -138,9 +146,17 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5A-mF-HxR">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem title="Library" id="AHG-Vl-i54"/>
+                                    <barButtonItem title="Library" id="AHG-Vl-i54">
+                                        <connections>
+                                            <action selector="library:" destination="WGZ-3J-I5Q" id="kX0-wp-Gw6"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem width="282" style="plain" systemItem="fixedSpace" id="zv5-za-zmO"/>
-                                    <barButtonItem title="Camera" width="428" id="sEw-fM-u6q"/>
+                                    <barButtonItem title="Camera" width="428" id="sEw-fM-u6q">
+                                        <connections>
+                                            <action selector="camera:" destination="WGZ-3J-I5Q" id="4Us-c9-VjW"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -164,8 +180,13 @@
                         <viewLayoutGuide key="safeArea" id="Jkh-6A-WpH"/>
                     </view>
                     <navigationItem key="navigationItem" title="Edit" id="NTK-5n-hqf"/>
+                    <connections>
+                        <outlet property="photoLibraryImage" destination="ZkC-tw-LHZ" id="rei-vk-hHs"/>
+                        <outlet property="textView" destination="kea-wb-1aH" id="dwY-Q9-D7W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5A2-Sn-GUv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="upP-RU-cfx" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="841.74107142857144"/>
         </scene>

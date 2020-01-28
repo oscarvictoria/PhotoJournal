@@ -14,7 +14,7 @@ class ImageCell: UICollectionViewCell {
     
     @IBOutlet weak var textView: UITextView!
     
-    func configured() {
+    func configured(for image: ImageObject) {
         imagePicture.image = UIImage(systemName: "circle")
         textView.text = "Hello"
       }

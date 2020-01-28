@@ -17,6 +17,7 @@
 		BEE3044E23DF8C1E00EE82CE /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE3044D23DF8C1E00EE82CE /* FileManager.swift */; };
 		BEE3045023DF8C5400EE82CE /* PersistanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE3044F23DF8C5400EE82CE /* PersistanceHelper.swift */; };
 		BEE3045223DF8C8A00EE82CE /* ImageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE3045123DF8C8A00EE82CE /* ImageObject.swift */; };
+		BEE3045423DFA6D000EE82CE /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE3045323DFA6D000EE82CE /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		BEE3044D23DF8C1E00EE82CE /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		BEE3044F23DF8C5400EE82CE /* PersistanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceHelper.swift; sourceTree = "<group>"; };
 		BEE3045123DF8C8A00EE82CE /* ImageObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageObject.swift; sourceTree = "<group>"; };
+		BEE3045323DFA6D000EE82CE /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				BEE3043623DF891200EE82CE /* ViewController.swift */,
+				BEE3045323DFA6D000EE82CE /* PhotoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				BEE3044723DF8AA100EE82CE /* ImageCell.swift in Sources */,
 				BEE3045223DF8C8A00EE82CE /* ImageObject.swift in Sources */,
 				BEE3043323DF891200EE82CE /* AppDelegate.swift in Sources */,
+				BEE3045423DFA6D000EE82CE /* PhotoViewController.swift in Sources */,
 				BEE3043523DF891200EE82CE /* SceneDelegate.swift in Sources */,
 				BEE3045023DF8C5400EE82CE /* PersistanceHelper.swift in Sources */,
 			);

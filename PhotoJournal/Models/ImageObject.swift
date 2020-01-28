@@ -9,7 +9,7 @@
 import Foundation
 
 struct ImageObject: Codable {
-  let imageText: String
+//  let imageText: String
   let imageData: Data
   let date: Date
   let identifier = UUID().uuidString
